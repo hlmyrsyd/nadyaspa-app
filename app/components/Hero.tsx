@@ -1,6 +1,6 @@
 import { motion, useScroll, useTransform } from "framer-motion"
 import Image from "next/image"
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Hero() {
     const [imagePosition, setImagePosition] = useState("top");
