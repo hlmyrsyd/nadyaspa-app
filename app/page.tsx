@@ -2,7 +2,7 @@
 
 import Lenis from "lenis";
 import { useEffect } from "react";
-import { Navigation, Hero } from "./components";
+import { Navigation, Hero, Description } from "./components";
 
 export default function Home() {
 
@@ -22,9 +22,9 @@ export default function Home() {
       {/* Page In */}
       
       <Navigation />
-
       <Hero />
-
+      <Description />
+      
     </div>
   );
 }
