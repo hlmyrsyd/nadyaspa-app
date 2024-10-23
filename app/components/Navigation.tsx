@@ -21,7 +21,7 @@ export default function Navigation() {
                 />
             </div> */}
             <div 
-                className="flex justify-center items-center text-center text-6xl font-semibold text-primary"
+                className="flex justify-center items-center text-center text-6xl font-semibold text-primary -mt-4"
                 style={{
                     fontFamily: 'var(--font-palace-script)',
                     whiteSpace: 'nowrap'

@@ -24,7 +24,9 @@ export default function Home() {
       <Navigation />
       <Hero />
       <Description />
-      
+      <div className="h-screen">
+        
+      </div>
     </div>
   );
 }
