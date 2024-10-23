@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { off } from "process";
 import "./globals.css";
 
 const palaceScript = localFont({
@@ -7,6 +8,12 @@ const palaceScript = localFont({
   variable: "--font-palace-script",
   weight: "100 900",
 });
+
+const italiana = localFont({
+  src: "./fonts/italiana.ttf",
+  variable: "--font-italiana",
+  weight: "100 900",
+})
 
 export const metadata: Metadata = {
   title: "Nadya Spa | Salon Khusus Wanita, Pijat Hamil & Baby Spa"
@@ -20,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${palaceScript.variable} antialiased`}
+        className={`${palaceScript.variable} ${italiana.variable} antialiased`}
       >
         {children}
       </body>

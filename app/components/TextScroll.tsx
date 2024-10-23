@@ -9,7 +9,7 @@ export default function TextScroll({ paragraph }: TextScrollProps) {
     const container = useRef<HTMLParagraphElement>(null);
     const { scrollYProgress } = useScroll({
         target: container,
-        offset: ["start 0.95", "start 0.65"],
+        offset: ["start 0.95", "start 0.7"],
     });
 
     const words = paragraph.split(" "); // Split paragraph into words
@@ -19,7 +19,7 @@ export default function TextScroll({ paragraph }: TextScrollProps) {
             className="flex flex-wrap"
             ref={container}
             style={{
-                fontSize: "clamp(1rem, 4vw, 1.875rem)", // Responsive font size
+                fontSize: "clamp(1.5rem, 4vw, 1.8rem)", // Responsive font size
                 lineHeight: 1.2, // Slightly larger line height for readability
                 height: "1vh",
                 wordBreak: "keep-all",
