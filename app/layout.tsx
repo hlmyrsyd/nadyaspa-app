@@ -10,7 +10,7 @@ const palaceScript = localFont({
 });
 
 const italiana = localFont({
-  src: "./fonts/italiana.ttf",
+  src: "./fonts/Italiana.ttf",
   variable: "--font-italiana",
   weight: "100 900",
 })
