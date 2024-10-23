@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import { off } from "process";
 import "./globals.css";
 
 const palaceScript = localFont({
