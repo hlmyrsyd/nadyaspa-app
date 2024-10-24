@@ -9,18 +9,18 @@ export default function TextScroll({ paragraph }: TextScrollProps) {
     const container = useRef<HTMLParagraphElement>(null);
     const { scrollYProgress } = useScroll({
         target: container,
-        offset: ["start 0.95", "start 0.7"],
+        offset: ["start 0.9", "end 0.8"],
     });
 
-    const words = paragraph.split(" "); // Split paragraph into words
+    const words = paragraph.split(" "); 
 
     return (
         <motion.p
             className="flex flex-wrap"
             ref={container}
             style={{
-                fontSize: "clamp(1.5rem, 4vw, 1.8rem)", // Responsive font size
-                lineHeight: 1.2, // Slightly larger line height for readability
+                fontSize: "clamp(1.5rem, 4vw, 1.8rem)", 
+                lineHeight: 1.2, 
                 height: "1vh",
                 wordBreak: "keep-all",
                 textAlign: "left",
@@ -47,22 +47,20 @@ type WordProps = {
 };
 
 const Word = ({ word, index, total, progress }: WordProps) => {
-    // Calculate delay for staggered animation of words
     const start = index / total;
     const end = start + 1 / total;
 
-    // Use transform for opacity and translateY (staggered entry)
     const opacity = useTransform(progress, [start, end], [0, 1]);
-    const translateY = useTransform(progress, [start, end], [50, 0]); // Animate from lower position to normal
+    const translateY = useTransform(progress, [start, end], [50, 0]); 
 
     return (
         <motion.span
             style={{
                 display: "inline-block",
-                marginRight: "0.5rem", // Spacing between words
+                marginRight: "0.5rem",
                 opacity,
                 transform: translateY,
-                transition: "all 0.5s ease", // Smooth transition
+                transition: "all 0.5s ease", 
             }}
         >
             {word}
