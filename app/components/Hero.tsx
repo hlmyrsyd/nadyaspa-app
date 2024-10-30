@@ -46,23 +46,46 @@ export default function Hero() {
                         fontFamily: 'var(--font-palace-script)',
                     }}
                 >
-                    <div className="h-26 overflow-hidden">
-                        <motion.h1
-                            className="text-center"
+                    <div className="flex flex-col border-b overflow-hidden ">
+                        <div className="h-26 overflow-hidden">
+                            <motion.h1
+                                className="text-center"
+                                style={{
+                                    fontSize: 'clamp(4.5rem, 12vw, 16rem)',
+                                    whiteSpace: 'nowrap'                 
+                                }}
+                                initial={{ opacity: 0, y: '100%' }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{
+                                    delay: 2,
+                                    duration: 2,
+                                    ease: 'circInOut',
+                                }}
+                            >
+                                Nadya Ethnic Spa
+                            </motion.h1>
+                        </div>
+                        <motion.div 
+                            className="flex w-full justify-evenly border-t bg-white/5 backdrop-blur-sm"
                             style={{
-                                fontSize: 'clamp(4.5rem, 12vw, 16rem)',
-                                whiteSpace: 'nowrap'                 
+                                fontSize: 'clamp(1rem, 5vw, 2rem)',
+                                fontFamily: 'var(--font-italiana)'
                             }}
-                            initial={{ opacity: 0, y: '-100%' }}
-                            animate={{ opacity: 1, y: 0 }}
+                            initial={{ opacity: 0, y: '100%' }}
+                            animate={{ opacity: 1, y: 0}}
                             transition={{
-                                delay: 2,
-                                duration: 1.5,
-                                ease: 'easeInOut',
+                                delay: 3,
+                                duration: 2,
+                                ease: 'circInOut',
                             }}
                         >
-                            Nadya Ethnic Spa
-                        </motion.h1>
+                            <p>Spa</p>
+                            <p>Salon</p>
+                            <p>Sauna</p>
+                            <p>PoundFit</p>
+                            <p>Yoga</p>
+                        </motion.div>
+
                     </div>
                 </div>         
             </motion.div>
