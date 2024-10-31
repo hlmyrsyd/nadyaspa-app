@@ -46,7 +46,16 @@ export default function Hero() {
                         fontFamily: 'var(--font-palace-script)',
                     }}
                 >
-                    <div className="flex flex-col border-b overflow-hidden ">
+                    <motion.div 
+                        className="flex flex-col border-b overflow-hidden"
+                        initial={{ y: '200% '}}
+                        animate={{ y: 0}}
+                        transition={{
+                            delay: 1.5,
+                            duration: 1.5,
+                            ease: 'circInOut',
+                        }}
+                    >
                         <div className="h-26 overflow-hidden">
                             <motion.h1
                                 className="text-center"
@@ -85,8 +94,7 @@ export default function Hero() {
                             <p>PoundFit</p>
                             <p>Yoga</p>
                         </motion.div>
-
-                    </div>
+                    </motion.div>
                 </div>         
             </motion.div>
         </div>
