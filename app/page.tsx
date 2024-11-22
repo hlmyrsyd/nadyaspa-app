@@ -2,7 +2,9 @@
 
 import Lenis from "lenis";
 import { useEffect, useRef } from "react";
-import { Navigation, Hero, Description, Menu } from "./components";
+import { 
+  // Navigation, 
+  Hero, Description, Menu } from "./components";
 
 export default function Home() {
   const heroRef = useRef<HTMLDivElement>(null);
