@@ -9,7 +9,7 @@ export default function TextScroll({ paragraph }: TextScrollProps) {
     const container = useRef<HTMLParagraphElement>(null);
     const { scrollYProgress } = useScroll({
         target: container,
-        offset: ["start 0.9", "end 0.8"],
+        offset: ["start 0.9", "end 0.85"],
     });
 
     const words = paragraph.split(" "); 

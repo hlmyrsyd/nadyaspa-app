@@ -6,7 +6,7 @@ export const HeadingScroll = () => {
 
     const { scrollYProgress } = useScroll({
         target: containerRef,
-        offset: ["start end", "0.4 start"], 
+        offset: ["start end", "0.3 start"], 
     });
 
     const translateY1 = useTransform(scrollYProgress, [0, 0.5], [-150, 0]); 
